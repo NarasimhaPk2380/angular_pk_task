@@ -25,4 +25,8 @@ export class CardComponent implements OnInit {
     this.utilsSrvc.deleteItemFromCart(bookId);
     this.getEventFromCard.emit('');
   }
+
+  trackByMethod(index: number, el: any): string {
+    return el.id;
+  }
 }

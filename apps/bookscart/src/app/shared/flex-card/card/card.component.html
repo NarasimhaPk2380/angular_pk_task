@@ -1,5 +1,5 @@
 <div class="main-items-container">
-    <div class="item-container" *ngFor="let card of cardsList" (click)="goToDetailsPage(card.id)">
+    <div class="item-container" *ngFor="let card of cardsList; trackBy:trackByMethod" (click)="goToDetailsPage(card.id)">
         <img [src]="card?.volumeInfo?.imageLinks?.smallThumbnail" alt="" />
         <p class="title">{{card?.volumeInfo?.title}}</p>
         <div class="content">{{card?.volumeInfo?.description}}</div>
