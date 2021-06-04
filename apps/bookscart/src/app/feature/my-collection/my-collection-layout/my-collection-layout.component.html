@@ -1,0 +1,6 @@
+<div class="main-container">
+    <div class="empty--cart" *ngIf="!myCollectionList?.length">
+        <p>Cart is empty, <a routerLink="search">Please go to search</a></p>
+    </div>
+    <a2zcart-card [cardsList]="myCollectionList" showDelete='false'></a2zcart-card>
+</div>

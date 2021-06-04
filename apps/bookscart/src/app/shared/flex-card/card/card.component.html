@@ -1,0 +1,17 @@
+<div class="main-items-container">
+    <div class="item-container" *ngFor="let card of cardsList" (click)="goToDetailsPage(card.id)">
+        <img [src]="card?.volumeInfo?.imageLinks?.smallThumbnail" alt="" />
+        <p class="title">{{card?.volumeInfo?.title}}</p>
+        <div class="content">{{card?.volumeInfo?.description}}</div>
+        <div class="author mb-15">
+            <span>
+                Written by</span> 
+                <span>
+                {{card?.volumeInfo?.authors?.toString() || 'anonymous'}}<br>
+                </span>
+        </div>
+        <div *ngIf="showDelete == 'true'">
+            <button mat-raised-button color="primary"  (click)="deleteCartItem(card.id)">Delete</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+.main-items-container {
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flexbox;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+  width: auto;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
+  text-align: center;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .title {
+    font-weight: 100;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  .author {
+    span {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+    text-align: end;
+    font-size: 14px;
+  }
+  .mb-15 {
+    margin: 10px 0;
+  }
+  .content {
+    font-size: 14px;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+
+  @media (min-width: 971px) {
+    .item-container {
+      margin: 10px 2%;
+      width: 22%;
+      padding: 10px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .item-container:nth-child(4n + 1) {
+      margin-left: 0;
+    }
+    .item-container:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 550px) and (max-width: 970px) {
+    .item-container {
+      margin: 10px 2.5%;
+      width: 30%;
+      padding: 10px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+    .item-container:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+    .item-container:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 549px) {
+    .item-container {
+      margin: 10px 0;
+      width: initial;
+      padding: 10px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+  }
+}
